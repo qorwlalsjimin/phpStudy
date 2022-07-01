@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: left;
+            font-size: small;
+        }
+        tr{
+            border: 15px;
+        }
+        td{
+            font-weight: normal;
+        }
+        .small{
+            width: 290px;
+        }
+        .PhoneNumberBox{
+            width: 112px;
+        }
+        button{
+            background-color: blue;
+            border-style: none;
+            border-radius: 10%;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post" action="test3_1.php">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td> <input class="small" type="text" name="id"> </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td> <input class="small" type="password" name="password" placeholder="(영문 대소문자/숫자 조합, 10자~16자)"> </td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td> <input class="small" type="password" name="passwordCheck"> </td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td> <input class="small" type="text" name="name"> </td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="radio" value="woman">여성
+                     <input type="radio" name="radio" value="man">남성
+                </td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td>
+                    <input type="checkbox" name="check[]" value="등산">등산
+                    <input type="checkbox" name="check[]" value="수영" >수영
+                    <input type="checkbox" name="check[]" value="독서">독서
+                    <input type="checkbox" name="check[]" value="음악감상">음악감상
+                </td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td>
+                    <select name="number">
+                        <option value="02">02</option>
+                        <option value="010">010</option>
+                    </select>
+                    <input class="PhoneNumberBox" type="text" name="MiddleNumber">
+                    <input class="PhoneNumberBox" type="text" name="LastNumber">
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="text" name="email">@
+                    <select name="mail_kind">
+                        <option value="default">선택</option>
+                        <option value="naver">naver.com</option>
+                        <option value="google">gmail.com</option>
+                        <option value="mirim">e-mirim.hs.kr</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개</td>
+                <td> <textarea class="small" rows="5" cols="50" name="selfIntroduce"> </textarea> </td>
+            </tr>
+        </table>
+        <button type="submit">제출</button>
+        <button type="reset">다시 작성</button>
+    </form>
+</body>
+</html>

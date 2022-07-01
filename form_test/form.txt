@@ -1,0 +1,58 @@
+<<form 양식태그
+:사용자 입력을 받는 태그
+1. input태그
+    1) text: 한 줄 입력 - value="kim" maxlength="10" 생략가능
+    2) password: ***으로 입력
+    3) checkbox: 여러 개 선택 - name이 다 똑같아야함
+    4) radio: 한 개 선택
+    5) submit: 제출전송
+    6) reset: 취소
+    7) email: 이메일 입력
+    8) number: 숫자 입력
+    9) color: 컬러picker
+    10)file: 파일 선택
+
+2.select: 콤보박스
+3.textarea: 여러 줄 입력
+
+<form method="post" action="#">
+</form>
+
+그전으로 돌아간다
+echo "<script>alert('비밀번호가 일치하지 않습니다');history.go(-1);</script>";
+
+<<파일업로드
+-html
+    <form method="post" action="test7_1.php" enctype="multipart/form-data">
+enctype 없으면 파일 업로드 안 됨
+
+-php
+move_uploaded_files() : html을 통해 들어온 파일은 이상한 이름, 이상한 폴더에 있다
+                        이것을 이름을 가진 폴더, 파일로 만들어주는 것
+$move_uploaded_files
+$FILES['userfile'][size]
+                 ['name']
+                 ['tmp_name']
+
+    $upload_file = $uploads_dir.basename($_FILES['userfile']['name']);
+basename이란? 파일경로(파일 이름까지 포함되어있음)에서 파일 이름만 추출하는 것
+1.저장 디렉토리 생성
+
+<<데이터베이스
+1.mysql 관리자 접속
+mysql -uroot -p111111 mysql
+
+1)사용할 DB 생성
+
+2)계정 생성
+create user test@localhost identified by '1111'; //localhost 접속할때
+create user 'test'@'%' identified by '1111'; //외부에서 접속할때
+
+3) 1번과 2번 연결
+grant all privileges on testdb.*to 'test'@'localhost';
+//testdb를 쓰는 'test'에게 권한을 주다
+//CRUD *create, read, update, delete
+
+4) 새로 고침
+flush privileges;
+

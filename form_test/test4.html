@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: left;
+            font-size: small;
+        }
+        tr{
+            border: 15px;
+        }
+        td{
+            font-weight: normal;
+        }
+        .small{
+            width: 290px;
+        }
+        .PhoneNumberBox{
+            width: 112px;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post" action="login.php">
+
+
+    <table>
+        <tr>
+            <td>아이디</td>
+            <td> <input class="small" type="text" name="userid"> </td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td> <input class="small" type="password" name="userpass" placeholder="(영문 대소문자/숫자 조합, 10자~16자)"> </td>
+        </tr>
+    </table>
+    
+    <input class="button" type="submit" value="Join">
+    <input class="button" type="reset" value="Reset">
+    </form>
+</body>
+</html>

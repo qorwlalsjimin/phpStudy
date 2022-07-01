@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="#">
+        이름 입력<input type="text" name="username" placeholder="이름을 입력하세요."/><br>
+        비밀번호 입력<input type="password" name="password" placeholder="비밀번호 입력"/>
+        <!-- <input type="submit" value="전송하기"/> -->
+        <hr>
+        <h1>좋아하는 과일을 선택하세요</h1>
+        <input type="checkbox" name="check" value="apple">apple
+        <input type="checkbox" name="check" value="grape">grape
+        <input type="checkbox" name="check" value="melon">melon
+        <input type="checkbox" name="check" value="banana">banana<br>
+        <button type="submit">전송하기</button>
+        <hr>
+
+        <h1>좋아하는 동물을 선택하세요</h1>
+        <input type="radio" name="radio" value="rabbit">rabbit
+        <input type="radio" name="radio" value="dog">dog
+        <input type="radio" name="radio" value="cat">cat
+        <input type="radio" name="radio" value="dolphin">dolphin<br>
+        <button type="submit">전송하기</button>
+        <input type="reset" name="reset" value="다시 작성">
+
+        <hr>
+        이메일 <input type="email" name="email"/>
+        <input type="number" name="num">
+        <button type="submit">전송하기</button>
+        <input type="reset" name="reset" value="다시 작성">
+        <hr>
+        컬러선택
+        <input type="color" value="#000bff"
+            onchange = "document.body.style.color=this.value">
+            <hr>
+        <input type="file" name="userfile"/>
+
+        <!-- combo box -->
+        <select name="sel" multiple>
+            <option value="kor">한국</option>
+            <option value="jap">일본</option>
+            <option value="usa">미국</option>
+        </select>
+
+
+        <textarea rows="10" cols="15" name="content">초기값</textarea>
+    </form>
+</body>
+</html>
